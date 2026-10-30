@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ServiceYourPool (preview) – Houston pool cleaners</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="banner">Preview – data being verified. Ratings and prices are from public pages, please confirm with the business.</div>
+<header><h1>Service<span>Your</span>Pool <small>preview</small></h1><nav><a href="#find">Find a cleaner</a><a href="#pricing">Zip pricing</a><a href="#sources">Data sources</a></nav></header>
+<section class="hero" id="find"><h2>Find a pool cleaner in Greater Houston</h2>
+<div class="search"><input id="q" placeholder="Zip code or city (e.g. 77494, Katy)"><button id="go">Search</button></div>
+<div class="filters"><select id="svc"><option value="">Any service</option></select>
+<select id="minr"><option value="0">Any rating</option><option value="4.5">4.5+</option><option value="4.8">4.8+</option></select>
+<select id="maxp"><option value="9999">Any price</option><option value="180">Published ≤ $180/mo</option><option value="220">Published ≤ $220/mo</option></select>
+<label><input type="checkbox" id="haspr"> Published price only</label>
+<select id="sort"><option value="rating">Sort: rating</option><option value="reviews">Most reviews</option><option value="price">Lowest price</option><option value="name">Name</option></select></div></section>
+<main><p id="count"></p><div id="results" class="grid"></div></main>
+<div id="modal" class="modal hidden"><div class="box"><button class="x" onclick="closeM()">×</button><div id="detail"></div></div></div>
+<section id="pricing"><h2>Zip pricing explorer <em>(estimates)</em></h2><input id="zq" placeholder="Filter by zip or area"><p class="method" id="method"></p><table id="ztab"><thead><tr><th>Zip</th><th>Area</th><th>Tier</th><th>Est. weekly service /mo</th></tr></thead><tbody></tbody></table>
+<h3>Published “starting at” prices</h3><ul id="pub"></ul></section>
+<section id="sources"><h2>Data sources</h2><p>Listings compiled from public pages: PoolPad Houston directory, Exa Places (Google rating data), Yelp, and company websites. Each listing links its sources. Not yet covered: Nextdoor (login), Facebook groups, Angi/HomeAdvisor/Thumbtack/Bark (blocked or quote-gated), Google Maps full crawl. Prices marked “published” come straight from the business site; zip ranges are estimates.</p></section>
+<footer>ServiceYourPool preview · not affiliated with listed businesses</footer>
+<script src="data/data.js"></script><script src="app.js"></script></body></html>
